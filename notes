@@ -1,0 +1,23 @@
+#Routes
+
+¿Como pasar un parametro desde una URL?
+R:/ Lo podemos realizar de esta forma
+    Route::get('/prueba/{nombre?}', function($nombre = null) {
+        $texto = "<h2>Texto desde una ruta </h2>";
+        $texto .= "Nombre: ".$nombre;
+        return $texto;
+    });
+
+#Laravel
+¿Como crear un controlador?
+R:/ Con el siguiente comando php artisan make:controller NombreController
+
+¿Como hacer un foreach en Laravel?
+R:/ @foreach($personas as $persona)
+        <li>{{$persona}}</li>
+    @endforeach
+
+#Modelos Laravel
+Dentro de la carpeta app encontramos los modelos uno de ellos es User.php
+¿Como creo un modelo?
+R:/ php artisan make:model Nombre
