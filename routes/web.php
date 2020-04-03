@@ -12,5 +12,20 @@
 */
 
 Route::get('/', function () {
+    // return view('welcome');
+    return '<h1>Hola mundo con Laravel</h1>';
+});
+
+Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/prueba/{nombre?}', function($nombre) {
+    $texto = "<h2>Texto desde una ruta </h2>";
+    $texto .= "Nombre: ".$nombre;
+    return view('pruebas', array(
+        'texto' => $texto
+    ));
+});
+
+Route::get('/animales', 'PruebasController@index');
