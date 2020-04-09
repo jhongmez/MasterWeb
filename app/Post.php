@@ -11,6 +11,10 @@ class Post extends Model
 
     //Relacion entre user y category de muchos a uno
     public function user() {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('App\User', 'user_id');
+    }
+
+    public function category() {
+        return $this->belongsTo('App\Category', 'category_id');
     }
 }
